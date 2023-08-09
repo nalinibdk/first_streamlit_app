@@ -67,6 +67,10 @@ streamlit.header("The fruit load list contain:")
 streamlit.dataframe(my_data_rows)
 
 
+add_my_fruit= streamlit.text_input('What fruit would you like information about?','jackfruit')
+streamlit.write('The user entered ', add_my_fruit)
+streamlit.text("Thanks for  adding jackfruit")
+
 
 
 
