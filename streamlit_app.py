@@ -12,7 +12,7 @@ import pandas
 
 import requests
 
-import urllib.error import URLError
+from urllib.error import URLError
 
 
 
