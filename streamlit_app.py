@@ -40,8 +40,6 @@ streamlit.dataframe(fruityvice_normalized)
 #requirements.txt
 snowflake-connector-python
 
-streamlit.text(my_data_row)
-
 
 
 
