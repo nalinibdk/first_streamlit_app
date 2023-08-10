@@ -98,6 +98,7 @@ streamlit.write('Thanks for  adding', add_my_fruit)
 #my_cur.execute("insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST values('from streamlit')")
 
 
+#Search fruit function
 def  get_fruityvice_data(this_fruit_choice):
    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
    # write your own comment -what does the next line do? 
@@ -115,3 +116,17 @@ try:
 
 except URLError as e:
    streamlit.error()
+
+
+streamlit.header("The fruit load list contains")
+#snowflake related function
+def get_fruit_load_list():
+  with my_cur = my_cnx.cursor() as my_cur
+      my_cur.execute("select * from fruit_load_list")
+      return my_cur.fetchall()
+
+#Add a buttom to load the fruit
+if streamlit.button('Get fruit load list')
+  my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+  my_data_rows=get_fruit_load_list()
+  streamlit.dataframe(my_data_rows)
