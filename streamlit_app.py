@@ -8,9 +8,9 @@ streamlit.text('🥑🍞Hard-Boiled Free-Range Eggs')
 
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
-#import pandas
+import pandas
 
-#import requests
+import requests
 
 from urllib.error import URLError
 
