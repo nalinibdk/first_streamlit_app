@@ -8,9 +8,9 @@ streamlit.text('🥑🍞Hard-Boiled Free-Range Eggs')
 
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
-import pandas
+#import pandas
 
-import requests
+#import requests
 
 from urllib.error import URLError
 
@@ -61,6 +61,8 @@ except URLError as e:
    streamlit.error()
 
 import snowflake.connector
+
+streamlit.stop()
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
